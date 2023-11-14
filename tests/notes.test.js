@@ -15,6 +15,8 @@ beforeEach(() => {
   saveDB.mockClear();
 })
 
+describe('cli app', () => {
+
 test('newNote inserts data and returns it', async () => {
   const note = 'Test note';
   const tags = ['tag1', 'tag2'];
@@ -51,3 +53,6 @@ test('removeNote does nothing if id is not found', async () => {
   const result = await removeNote(idToRemove);
   expect(result).toBeUndefined();
 });
+
+})
+
